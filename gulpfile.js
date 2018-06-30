@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin'),
+    webp = require('gulp-webp'),
     notify = require('gulp-notify');
 
 
@@ -41,5 +43,17 @@ gulp.task('watch', function() {
     gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/js/*.js', ['scripts']);
   });
+
+gulp.task('images', () =>
+  gulp.src('src/images/*')
+      .pipe(imagemin())
+      .pipe(gulp.dest('dist/images'))
+);
+
+gulp.task('webp', () =>
+    gulp.src('src/images/*')
+        .pipe(webp())
+        .pipe(gulp.dest('dist/images'))
+);
 
   gulp.task('default', ['sass', 'scripts', 'watch']);

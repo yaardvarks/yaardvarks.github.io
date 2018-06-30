@@ -5,7 +5,8 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #222222;
-  color: #ffffff; }
+  color: #ffffff;
+  text-align: center; }
 
 header {
   margin: auto;
@@ -40,3 +41,36 @@ nav {
           color: #c64747; }
         nav ul li a i {
           font-size: 25pt; }
+
+.img_frame {
+  display: inline-block; }
+  .img_frame img {
+    border: solid 1px #fff; }
+
+.picture_stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 98%;
+  margin: auto; }
+  .picture_stack picture {
+    float: left;
+    width: 40%; }
+    .picture_stack picture:first-child {
+      width: 30%;
+      margin-right: -3px;
+      -ms-flex-item-align: start;
+      align-self: flex-start;
+      margin-top: 60px; }
+    .picture_stack picture:nth-child(2) {
+      position: relative;
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .picture_stack picture:last-child {
+      width: 30%;
+      margin-left: -3px;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+      margin-bottom: 60px; }
+    .picture_stack picture img {
+      width: 100%; }

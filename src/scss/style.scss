@@ -6,6 +6,7 @@ html,body{
     padding:0;
     background-color:#222222;
     color:#ffffff;
+    text-align: center;
 }
 
 header{
@@ -30,14 +31,10 @@ nav{
     ul{
         display:inline-block;
         padding:0;
-        
-
         li{
             list-style: none;
             float:left;
             padding:10px;
-        
-
             a{
                 color:#fff;
                 transition:.3s;
@@ -50,4 +47,47 @@ nav{
             }
         }
     }
+}
+
+.img_frame{
+    display:inline-block;
+    img{
+     border:solid 1px #fff;
+    }
+}
+
+.picture_stack{
+    display:flex;
+    width:98%;
+    margin:auto;
+
+    picture{
+        float:left;
+        width:40%;
+
+        &:first-child{
+            width:30%;
+            margin-right:-3px;
+            align-self: flex-start;
+            margin-top:60px;
+        }
+
+        &:nth-child(2) {
+            position:relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        &:last-child{
+            width:30%;
+            margin-left:-3px;
+            align-self: flex-end;
+            margin-bottom:60px;
+        }
+
+        img{
+            width:100%;
+        }
+    }
+
+
 }
