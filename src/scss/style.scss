@@ -1,9 +1,15 @@
+
+$primary-color: #222222;
+$secondary-color: #c64747;
+$base-color: #fff;
+$select-color:#ffb7b7;
+
 *{
     ::selection {
-        background: #ffb7b7; /* WebKit/Blink Browsers */
+        background: $select-color; /* WebKit/Blink Browsers */
     }
     ::-moz-selection {
-    background: #ffb7b7; /* Gecko Browsers */
+    background: $select-color; /* Gecko Browsers */
     }
 }
 
@@ -13,8 +19,8 @@ html,body{
     height:100%;
     margin:0;
     padding:0;
-    background-color:#222222;
-    color:#ffffff;
+    background-color:$primary-color;
+    color:$base-color;
     text-align: center;
 }
 
@@ -28,7 +34,7 @@ header{
         -webkit-font-smoothing: antialiased;
         font-weight: normal;
         font-size:50pt;
-        border-bottom:solid 8px #c64747;
+        border-bottom:solid 8px $secondary-color;
         border-radius: 2px;
         margin-bottom:0;
     }
@@ -45,10 +51,10 @@ nav{
             float:left;
             padding:10px;
             a{
-                color:#fff;
+                color:$base-color;
                 transition:.3s;
                 &:hover{
-                    color: #c64747;
+                    color: $secondary-color;
                 }
                 i{
                     font-size:25pt;
@@ -106,8 +112,8 @@ nav{
     margin:50px 0 50px;
     padding:20px 0 20px;
     font-family: 'Noto Sans', sans-serif;
-    border-top:solid 3px #c64747;
-    border-bottom:solid 3px #c64747;
+    border-top:solid 3px $secondary-color;
+    border-bottom:solid 3px $secondary-color;
 
     p{
         &:first-child{
